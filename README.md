@@ -83,7 +83,7 @@
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/your-username/sme-carbon-tracker.git
-cd sme-carbon-tracker
+git clone https://github.com/FoxlyTenTen/CO2Quest.git
+cd CO2Quest
 npm install
 npx expo start

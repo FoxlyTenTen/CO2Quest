@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+# 🌱 CO2Quest
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> Track, analyze, and reduce your company's transport-related carbon footprint — and earn rewards!  
+> Built for Small and Medium Enterprises (SMEs) to encourage sustainability and operational efficiency.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 App Features
 
-   ```bash
-   npm install
-   ```
+- 🚗 **Vehicle Tracking**: Record business trips with real-time distance tracking.
+- ⛽ **Fuel-Based Carbon Calculation**: Input fuel usage (Petrol/Diesel) and calculate emissions using Malaysia’s official emission factors.
+- 📈 **Daily Carbon Dashboard**: View your carbon emission stats by day.
+- 🎯 **Personalized AI Assistant**: Get carbon reduction tips using AI-powered analysis.
+- 🎁 **Reward System**: Redeem vouchers, discounts, and training credits based on sustainable activities.
+- 🛠️ **Firebase Integration**: Secure cloud storage for user data, carbon records, and point system.
+- 🖥️ **Modern UI/UX**: Clean, minimal, business-friendly design with white background bottom tab.
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+## 🛠 Tech Stack
 
-In the output, you'll find options to open the app in a
+| Technology | Purpose |
+|:-----------|:--------|
+| **React Native (Expo)** | Cross-platform mobile development |
+| **Expo Router** | File-based navigation |
+| **Firebase Firestore** | Real-time cloud database |
+| **Firebase Auth** | User authentication |
+| **Google Generative AI** | Carbon assistant (recommendation engine) |
+| **LightGBM/XGBoost** | Machine learning model for carbon prediction |
+| **Location API** | Real-time distance tracking for trips |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📊 Database Structure (Firebase Firestore)
 
-## Get a fresh project
 
-When you're ready, run:
+> Each date stores an **array of trip objects** for that day.
+
+---
+
+## 📈 Carbon Emission Formula
+
+
+**Emission Factors** (Malaysia standard):
+- Petrol: `2.32 kg CO₂/liter`
+- Diesel: `2.68 kg CO₂/liter`
+
+---
+
+## 🚀 Key Screens
+
+- **Home**: Quick access to dashboard and tracking
+- **Dashboard**: Visualize daily emissions and future prediction
+- **Vehicle Tracking**: Add company vehicles, start/stop tracking journeys
+- **AI Chatbot**: Personalized advice to reduce transport emissions
+- **Rewards**: View available incentives and redeem based on performance
+
+---
+
+## 🏆 SME Rewards
+
+| Reward | Description |
+|:-------|:------------|
+| ☕ 10% Discount at Starbucks (SME Plan) | Use at business meetings |
+| 🚚 50% Off Grab for Business | Delivery service discounts |
+| 💻 RM500 Google Ads Credit | Kickstart online marketing |
+| 📚 Free Digital Marketing Course | Boost your online presence |
+| 🖨️ RM100 Office Supplies Voucher | Redeem with SME partners |
+
+---
+
+## 📈 Machine Learning (Prediction)
+
+- Predicts **tomorrow's carbon emission** based on the past 3 days (`prev1`, `prev2`, `prev3`).
+- Models tested:
+  - Linear Regression
+  - Random Forest
+
+✅ Final model: **Random Forest** for better balance between speed and accuracy.
+
+---
+
+## ⚙️ Installation
 
 ```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+git clone https://github.com/your-username/sme-carbon-tracker.git
+cd sme-carbon-tracker
+npm install
+npx expo start
